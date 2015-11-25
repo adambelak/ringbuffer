@@ -31,7 +31,7 @@ public class RingBufferTest {
 
     @Before
     public void setup() {
-        buffer = new FakeBlockingQueueBasedRingBuffer(BUFFER_SIZE);
+        buffer = new SimpleRingBuffer(BUFFER_SIZE);
         timer = new Timer();
     }
 

@@ -49,7 +49,7 @@ public class LoadTest {
 
     @Before
     public void setup() {
-        buffer = new FakeBlockingQueueBasedRingBuffer(BUFFER_SIZE);
+        buffer = new SimpleRingBuffer(BUFFER_SIZE);
         consumers = createConsumers();
         producers = createProducers();
         workerThreads = Executors.newFixedThreadPool(consumers.size()
